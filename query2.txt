@@ -1,0 +1,6 @@
+SELECT a.country, a.region, b.generosity
+FROM country_region a INNER JOIN country_generosity b
+ON a.country = b.country
+WHERE a.region in ('Middle East and Northern Africa', 'Central and Eastern Europe')
+ORDER BY b.generosity
+LIMIT 1;
